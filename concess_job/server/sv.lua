@@ -2,8 +2,8 @@ ESX = exports["es_extended"]:getSharedObject()
 
 ----------- ANNONCES
 
-RegisterServerEvent('sacario_concess:AnnonceOuverture')
-AddEventHandler('sacario_concess:AnnonceOuverture', function()
+RegisterServerEvent('sacario_concessMoto:AnnonceOuverture')
+AddEventHandler('sacario_concessMoto:AnnonceOuverture', function()
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local xPlayers	= ESX.GetPlayers()
@@ -15,7 +15,7 @@ AddEventHandler('sacario_concess:AnnonceOuverture', function()
 		TriggerClientEvent('ox_lib:notify', xPlayers[i], {
 			id = 'AO',
 			title = 'Concessionnaire',
-			description = 'Le concessionnaire est maintenant Ouvert !',
+			description = 'Le concessionnaire moto est maintenant Ouvert !',
 			duration = 6000,
 			icon = Config.MenuF6.Annonce.Ouverture.Icon,
             iconColor = Config.MenuF6.Annonce.Ouverture.IconColor,
@@ -33,8 +33,8 @@ AddEventHandler('sacario_concess:AnnonceOuverture', function()
 	end
 end)
 
-RegisterServerEvent('sacario_concess:AnnonceFermeture')
-AddEventHandler('sacario_concess:AnnonceFermeture', function()
+RegisterServerEvent('sacario_concessMoto:AnnonceFermeture')
+AddEventHandler('sacario_concessMoto:AnnonceFermeture', function()
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local xPlayers	= ESX.GetPlayers()
@@ -45,7 +45,7 @@ AddEventHandler('sacario_concess:AnnonceFermeture', function()
 		TriggerClientEvent('ox_lib:notify', xPlayers[i], {
 			id = 'AF',
 			title = 'Concessionnaire',
-			description = 'Le concessionnaire ferme ses portes pour aujourd\'hui !',
+			description = 'Le concessionnaire moto ferme ses portes pour aujourd\'hui !',
 			duration = 6000,
 			icon = Config.MenuF6.Annonce.Fermeture.Icon,
             iconColor = Config.MenuF6.Annonce.Fermeture.IconColor,
@@ -63,8 +63,8 @@ AddEventHandler('sacario_concess:AnnonceFermeture', function()
 	end
 end)
 
-RegisterServerEvent('sacario_concess:AnnonceRecrutement')
-AddEventHandler('sacario_concess:AnnonceRecrutement', function()
+RegisterServerEvent('sacario_concessMoto:AnnonceRecrutement')
+AddEventHandler('sacario_concessMoto:AnnonceRecrutement', function()
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local xPlayers	= ESX.GetPlayers()
@@ -76,7 +76,7 @@ AddEventHandler('sacario_concess:AnnonceRecrutement', function()
 		TriggerClientEvent('ox_lib:notify', xPlayers[i], {
 			id = 'AR',
 			title = 'Concessionnaire',
-			description = 'Recrutement en cours, rendez-vous au concessionnaire !',
+			description = 'Recrutement en cours, rendez-vous au concessionnaire moto!',
 			duration = 6000,
 			icon = Config.MenuF6.Annonce.Recrutement.Icon,
             iconColor = Config.MenuF6.Annonce.Recrutement.IconColor,
@@ -94,7 +94,7 @@ AddEventHandler('sacario_concess:AnnonceRecrutement', function()
 	end
 end)
 
-RegisterServerEvent('sacario_concess:AnnoncePerso')
+RegisterServerEvent('sacario_concessMoto:AnnoncePerso')
 AddEventHandler('sacario_concess:AnnoncePerso', function(content)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
@@ -105,7 +105,7 @@ AddEventHandler('sacario_concess:AnnoncePerso', function(content)
 		
 		TriggerClientEvent('ox_lib:notify', xPlayers[i], {
 			id = 'AR',
-			title = 'Concessionnaire',
+			title = 'Concessionnaire moto',
 			description = content,
 			duration = 6000,
 			icon = Config.MenuF6.Annonce.Perso.Icon,
