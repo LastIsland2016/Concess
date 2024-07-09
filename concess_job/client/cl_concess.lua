@@ -27,7 +27,7 @@ end)
 Citizen.CreateThread(function() 
     
     while true do 
-        if IsControlJustPressed(1,167) and (ESX.PlayerData.job and ESX.PlayerData.job.name == "concess") then
+        if IsControlJustPressed(1,167) and (ESX.PlayerData.job and ESX.PlayerData.job.name == "concessMoto") then
             lib.showContext('MenuF6')
         end
         Citizen.Wait(1)  
@@ -90,7 +90,7 @@ lib.registerContext({
             iconColor = '#FFFFFF',
             arrow = true,
             onSelect = function()
-                TriggerServerEvent('sacario_concess:AnnonceFermeture')  
+                TriggerServerEvent('sacario_concessMoto:AnnonceFermeture')  
             end
         },
         {
@@ -99,7 +99,7 @@ lib.registerContext({
             iconColor = '#FFFFFF',
             arrow = true,
             onSelect = function()
-                TriggerServerEvent('sacario_concess:AnnonceRecrutement')  
+                TriggerServerEvent('sacario_concessMoto:AnnonceRecrutement')  
             end
         },
 		{
@@ -112,7 +112,7 @@ lib.registerContext({
 					{type = 'input', label = 'Message', description = 'Choisis ton message.', required = true, min = 4, max = 75}
 				})
 				if input then 
-					TriggerServerEvent('sacario_concess:AnnoncePerso', input[1])  
+					TriggerServerEvent('sacario_concessMoto:AnnoncePerso', input[1])  
 				else 
 					return
 				end
@@ -145,7 +145,7 @@ function MenuHistorique()
                     iconColor = 'FFF68F',
                     description = "Gain pour l'entreprise : "..v.gain.. '\n Coût pour l\'entreprise : ' ..v.cost.. '\n Objet affecté : ' ..v.vehicle.. '\n Utilisateur :' ..v.identifier,
                     onSelect = function()
-                        if ESX.PlayerData.job and ESX.PlayerData.job.name == 'concess' and ESX.PlayerData.job.grade == 4 then
+                        if ESX.PlayerData.job and ESX.PlayerData.job.name == 'concessMoto' and ESX.PlayerData.job.grade == 4 then
                             local input = lib.inputDialog('Gestion historique',{
                                 {type = 'checkbox', label = 'Supprimer cette information', required = true}
 
