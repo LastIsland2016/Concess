@@ -8,7 +8,7 @@ Config = {
         Type = 523, 
         Size = 0.6,
         Color = 48,
-        Title = 'Concessionnaire Auto'
+        Title = 'Concessionnaire Moto'
     },
     -------------------
     --------- ICON ET COULEUR POUR LE MENU DES CATEGORIES DANS LE CATALOGUE
